@@ -103,7 +103,7 @@ class BlogController extends Controller
         return [
             "status" => 1,
             "data" => $blog,
-            "msg" => "Blog Berhasil Diubah!" /* Pesan ketika data yang dicari berhasil terubah */
+            "msg" => "Blog Berhasil Diubah!" /* Pesan ketika data yang dicari berhasil terubah  */
         ];
     }
 
