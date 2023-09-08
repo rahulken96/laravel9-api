@@ -16,7 +16,14 @@
         },
       });
       let data = await response.json();
-      console.log(data);
+      console.log(data.data);
+
+      if(data.status != 200){
+        document.getElementById("status").style.color = "red";
+      }else{
+        document.getElementById("status").style.color = "lime";
+      }
+      document.getElementById('status').innerHTML= '- ' + data.status;
     };
 
     /* Panggil fungsi */
@@ -25,6 +32,6 @@
 
 </head>
 <body>
-  <h1>TEST REST API</h1>
+  <h1>TEST REST API <span id="status"></span></h1>
 </body>
 </html>
