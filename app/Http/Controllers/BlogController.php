@@ -18,7 +18,7 @@ class BlogController extends Controller
 
         /* Fungsi Disini adalah untuk mengambil semua data ketika menggunakan api dengan melihat semua data */
         $blogs = !empty(Blog::get()) ? Blog::select('title','body')->get() : request();
-        return [
+        return $data = [
             "status" => 1,
             "data" => $blogs
         ];

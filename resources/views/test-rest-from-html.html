@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test REST Api | CORS Case</title>
+
+  <script>
+    async function getData() {
+      let response = await fetch('http://127.0.0.1:8000/api/blogs/', {
+        method: 'GET',
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
+      let data = await response.json();
+      console.log(data);
+    };
+
+    /* Panggil fungsi */
+    getData();
+  </script>
+
+</head>
+<body>
+  <h1>TEST REST API</h1>
+</body>
+</html>

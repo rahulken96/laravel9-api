@@ -15,7 +15,8 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie'], //Laravel udh auto membuat cors agar tidak terjadi error terkena policy same-origin policy pada browser
+    // 'paths' => [], //Akan terkena error CORS
 
     'allowed_methods' => ['*'],
 
